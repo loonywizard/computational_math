@@ -4,10 +4,12 @@
 
 using namespace std;
 
+// Исследуемая функция: 1.8 * x^3 - 2.47 * x^2 - 5.53 * x + 1.539 
 double f(double x) {
   return 1.8 * pow(x, 3) - 2.47 * pow(x, 2) - 5.53 * x + 1.539;
 }
 
+// Производная исследуемой функции: 5.4 * x^2 - 4.94 * x - 5.53
 double df(double x) {
   return 5.4 * pow(x, 2) - 4.94 * x - 5.53;
 }
@@ -19,8 +21,6 @@ int main() {
   double b = 100;
   double h = 1;
   double e = pow(10, -8);
-
-  // cin >> a >> b >> h >> e;
 
   if (f(a) == 0) {
     roots.push_back(a);
@@ -93,6 +93,7 @@ int main() {
     }
   }
 
+  // Вывод всех корней уравнения
   for (int i = 0; i < roots.size(); i++) {
     cout << roots[i] << endl;
   }
